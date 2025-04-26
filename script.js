@@ -16,6 +16,8 @@ document.getElementById('loginForm')?.addEventListener('submit', function(event)
 let dropArea = document.getElementById('drop-area');
 
 if (dropArea) {
+    const uploadMessage = document.getElementById('upload-message');
+
     // Prevent default behaviors
     ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
         dropArea.addEventListener(eventName, preventDefaults, false);
@@ -26,7 +28,7 @@ if (dropArea) {
         e.stopPropagation();
     }
 
-    // Highlight drop area when item is dragged over
+    // Highlight drop area
     ['dragenter', 'dragover'].forEach(eventName => {
         dropArea.addEventListener(eventName, () => dropArea.classList.add('highlight'), false);
     });
@@ -47,6 +49,7 @@ if (dropArea) {
     function handleFiles(files) {
         files = [...files];
         files.forEach(previewFile);
+        uploadMessage.innerText = `✅ ${files.length} image(s) loaded successfully!`;
     }
 
     function previewFile(file) {
@@ -55,6 +58,7 @@ if (dropArea) {
         reader.onloadend = function() {
             let img = document.createElement('img');
             img.src = reader.result;
+            img.alt = file.name;
             document.getElementById('gallery').appendChild(img);
         }
     }
