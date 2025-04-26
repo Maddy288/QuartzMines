@@ -1,10 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Quartz Miners - Home</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.5)), url('images/mineral1.png') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
+    .hero h1 {
+      font-size: 3em;
+      font-weight: bold;
+    }
+    .hero p {
+      font-size: 1.2em;
+      margin-top: 15px;
+    }
+    .hero .cta-buttons {
+      margin-top: 25px;
+    }
+    .cta-buttons a {
+      background: white;
+      color: #2575fc;
+      font-weight: bold;
+      padding: 12px 24px;
+      margin: 0 10px;
+      border-radius: 8px;
+      text-decoration: none;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    .cta-buttons a:hover {
+      background: #2575fc;
+      color: white;
+    }
+
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 40px 20px;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .feature-card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      width: 280px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .feature-card h3 {
+      margin-top: 10px;
+      color: #2575fc;
+    }
+
+    .feature-card p {
+      font-size: 0.95em;
+      color: #444;
+    }
+
+    @media screen and (max-width: 600px) {
+      .hero h1 { font-size: 2em; }
+      .features { flex-direction: column; align-items: center; }
+    }
+  </style>
 </head>
 <body>
 <header>
@@ -18,9 +83,33 @@
   </nav>
 </header>
 
-<section>
-  <h2>Welcome to Quartz Miners</h2>
-  <p>We provide the finest quality quartz minerals, backed by authentic certifications.</p>
+<section class="hero">
+  <h1>Premium Quartz Minerals for Global Supply</h1>
+  <p>Certified. Trusted. Delivered.</p>
+  <div class="cta-buttons">
+    <a href="gallery.html">View Gallery</a>
+    <a href="contact.html">Contact Us</a>
+  </div>
+</section>
+
+<section class="features">
+  <div class="feature-card">
+    <img src="images/mineral2.jpg" alt="Premium Quality" width="100%" style="border-radius: 8px;" />
+    <h3>Premium Quality</h3>
+    <p>Each mineral is quality checked and certified for purity and durability.</p>
+  </div>
+
+  <div class="feature-card">
+    <img src="images/mineral3.jpg" alt="Global Reach" width="100%" style="border-radius: 8px;" />
+    <h3>Global Reach</h3>
+    <p>We serve clients worldwide with timely and safe delivery logistics.</p>
+  </div>
+
+  <div class="feature-card">
+    <img src="images/mineral1.png" alt="Trusted Process" width="100%" style="border-radius: 8px;" />
+    <h3>Trusted Process</h3>
+    <p>Our sourcing and grading process is fully transparent and traceable.</p>
+  </div>
 </section>
 
 <footer>
