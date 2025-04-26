@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quartz Miners Admin Dashboard</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header>
+  <h1>Admin Dashboard</h1>
+  <nav>
+    <a href="../index.html">View Website</a>
+  </nav>
+</header>
+
+<section>
+  <h2>Upload Mineral Images</h2>
+  <div id="drop-area">
+    <p>Drag & drop images here</p>
+    <input type="file" id="fileElem" multiple accept="image/*" style="display:none">
+    <button onclick="document.getElementById('fileElem').click()">Select Files</button>
+    <div id="gallery"></div>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 Quartz Miners Admin. All rights reserved.</p>
+</footer>
+
+<script src="../script.js"></script>
+</body>
+</html>
